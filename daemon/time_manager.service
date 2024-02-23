@@ -1,0 +1,14 @@
+#This systemd service file shall be used to start the time-manager service during system startup
+# and ensure automatic restart of the time-manager service in case of a crash.
+
+[Unit]
+Description=Time Manager Service
+
+[Service]
+ExecStart=/Documents/time_manager/daemon/src/.a.out
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
+
